@@ -15,5 +15,21 @@ public class Hesapmakinesitest {
 			
 		Assert.assertEquals(24, toplam);
 	}
-
+	 @Test
+	 public void testCikart() throws Exception {
+		 Hesapmakinesi hesapMakinesi = new Hesapmakinesi();
+		 assertEquals(15, hesapMakinesi.cikart(15, 0));
+	 }
+	 
+	 @Test
+	 public void testSifirdancikincaeksiolur() throws Exception {
+		 Hesapmakinesi hesapMakinesi = new Hesapmakinesi();
+		 assertEquals(-15, hesapMakinesi.cikart(0, 15));
+	 }
+	 
+	 @Test
+	 public void testSayidansifircikincasayiaynikalir() throws Exception {
+		 Hesapmakinesi hesapMakinesi = new Hesapmakinesi();
+		 assertEquals(15, hesapMakinesi.cikart(15, 0));
+	 }
 }
